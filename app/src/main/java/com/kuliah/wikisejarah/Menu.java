@@ -21,8 +21,8 @@ import android.widget.Toast;
 
 public class Menu extends Fragment{
     GridView gv;
-    String[] list = {"Timeline", "Tokoh", "Wiki"};
-    int[] img = {R.drawable.ic_icon_timeline, R.drawable.ic_icon_tokoh, R.drawable.ic_icon_wiki};
+    String[] list = {"Timeline", "Tokoh", "Latar Belakang", "Wiki"};
+    int[] img = {R.drawable.ic_icon_timeline, R.drawable.ic_icon_tokoh, R.drawable.ic_icon_latar, R.drawable.ic_icon_wiki};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +34,7 @@ public class Menu extends Fragment{
         gv.setAdapter(gridAdapter);
 
         String tok[] = getActivity().getIntent().getStringArrayExtra("tokoh");
+        int tokP[] = getActivity().getIntent().getIntArrayExtra("tokohPhoto");
         String tokD[] = getActivity().getIntent().getStringArrayExtra("tokohDetail");
         String tl[] = getActivity().getIntent().getStringArrayExtra("timeline");
         String tlD[] = getActivity().getIntent().getStringArrayExtra("timelineDetail");
@@ -51,11 +52,25 @@ public class Menu extends Fragment{
                     Intent intent = new Intent(getActivity(), TokohActivity.class);
                     intent.putExtra("tokoh", tok);
                     intent.putExtra("tokohDetail", tokD);
+                    intent.putExtra("tokohPhoto", tokP);
                     startActivity(intent);
                 }
                 if(list[i].equals("Wiki")){
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtu.be/jIU0-TrHGC8"));
+                    String wiki = getActivity().getIntent().getStringExtra("wiki");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(wiki));
                     startActivity(intent);
+                }
+
+                if(list[i].equals("Latar Belakang")){
+                    Bundle b = getActivity().getIntent().getExtras();
+                    String lat = getActivity().getIntent().getStringExtra("latar");
+                    int latP = b.getInt("latarPhoto");
+
+                    Intent intent = new Intent(getActivity(), Latar.class);
+                    intent.putExtra("latar", lat);
+                    intent.putExtra("latarPhoto", latP);
+                    startActivity(intent);
+
                 }
             }
         });
