@@ -1,79 +1,78 @@
 package com.kuliah.wikisejarah;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 
-public class Menu extends Fragment{
-    GridView gv;
-    String[] list = {"Timeline", "Tokoh", "Latar Belakang", "Wiki"};
-    int[] img = {R.drawable.ic_icon_timeline, R.drawable.ic_icon_tokoh, R.drawable.ic_icon_latar, R.drawable.ic_icon_wiki};
+public class Menu extends Fragment implements View.OnClickListener {
+
+    Button timeline, tokoh, wiki, latar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_menu,container,false);
         // Inflate the layout for this fragment
-        MenuAdapter gridAdapter = new MenuAdapter(getActivity().getApplicationContext(), list, img);
-        gv = rootView.findViewById(R.id.gridView);
-        gv.setAdapter(gridAdapter);
+        return inflater.inflate(R.layout.fragment_menu, container, false);
+    }
+    @Override
 
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        timeline = view.findViewById(R.id.btn_timeline);
+        tokoh = view.findViewById(R.id.btn_tokoh);
+        wiki = view.findViewById(R.id.btn_wiki);
+        latar = view.findViewById(R.id.btn_latar);
+
+        timeline.setOnClickListener(this::onClick);
+        tokoh.setOnClickListener(this::onClick);
+        wiki.setOnClickListener(this::onClick);
+        latar.setOnClickListener(this::onClick);
+    }
+    @Override
+    public void onClick(View view) {
         String tok[] = getActivity().getIntent().getStringArrayExtra("tokoh");
-        int tokP[] = getActivity().getIntent().getIntArrayExtra("tokohPhoto");
         String tokD[] = getActivity().getIntent().getStringArrayExtra("tokohDetail");
         String tl[] = getActivity().getIntent().getStringArrayExtra("timeline");
         String tlD[] = getActivity().getIntent().getStringArrayExtra("timelineDetail");
 
-        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if(list[i].equals("Timeline")){
-                    Intent intent = new Intent(getActivity(), TimelineActivity.class);
-                    intent.putExtra("timeline", tl);
-                    intent.putExtra("timelineDetail", tlD);
-                    startActivity(intent);
-                }
-                if(list[i].equals("Tokoh")){
-                    Intent intent = new Intent(getActivity(), TokohActivity.class);
-                    intent.putExtra("tokoh", tok);
-                    intent.putExtra("tokohDetail", tokD);
-                    intent.putExtra("tokohPhoto", tokP);
-                    startActivity(intent);
-                }
-                if(list[i].equals("Wiki")){
-                    String wiki = getActivity().getIntent().getStringExtra("wiki");
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(wiki));
-                    startActivity(intent);
-                }
+        if(view.getId() == R.id.btn_timeline){
 
-                if(list[i].equals("Latar Belakang")){
-                    Bundle b = getActivity().getIntent().getExtras();
-                    String lat = getActivity().getIntent().getStringExtra("latar");
-                    int latP = b.getInt("latarPhoto");
+            Intent i = new Intent(getActivity(), TimelineActivity.class);
+            i.putExtra("timeline", tl);
+            i.putExtra("timelineDetail", tlD);
+            startActivity(i);
 
-                    Intent intent = new Intent(getActivity(), Latar.class);
-                    intent.putExtra("latar", lat);
-                    intent.putExtra("latarPhoto", latP);
-                    startActivity(intent);
+        }if(view.getId() == R.id.btn_tokoh){
 
-                }
-            }
-        });
-        return rootView;
+            Intent i = new Intent(getActivity(), TokohActivity.class);
+            i.putExtra("tokoh", tok);
+            i.putExtra("tokohDetail", tokD);
+            startActivity(i);
+
+        }if(view.getId() == R.id.btn_wiki){
+
+            System.out.println("Wiki");
+
+        }if(view.getId() == R.id.btn_latar){
+
+            System.out.println("Latar");
+
+        }
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
 }

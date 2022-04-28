@@ -24,7 +24,7 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.Timeli
     @Override
     public TimelineViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.item_row_timeline, parent, false);
+        View view = inflater.inflate(R.layout.item_row_tokoh, parent, false);
         return new TimelineViewHolder(view);
     }
 

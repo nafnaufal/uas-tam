@@ -18,8 +18,8 @@ public class TimelineActivity extends AppCompatActivity {
         name = getIntent().getStringArrayExtra("timeline");
         detail = getIntent().getStringArrayExtra("timelineDetail");
 
-        TimelineAdapter timelineAdapter = new TimelineAdapter(this, name, detail);
-        rvtimeline.setAdapter(timelineAdapter);
+        TokohAdapter tokohAdapter = new TokohAdapter(this, name, detail);
+        rvtimeline.setAdapter(tokohAdapter);
         rvtimeline.setLayoutManager(new LinearLayoutManager(this));
     }
 }
