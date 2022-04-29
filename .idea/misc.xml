@@ -8,20 +8,22 @@
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/drawable/ic_detail_foreground.xml" value="0.1" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/drawable/ic_icon_timeline.xml" value="0.1465" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/drawable/ic_menu_foreground.xml" value="0.1535" />
-        <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/activity_latar.xml" value="0.33" />
+        <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/activity_latar.xml" value="0.18" />
+        <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/activity_lokasi.xml" value="0.16973065412569474" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/activity_menu.xml" value="0.2" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/activity_timeline.xml" value="0.17074275362318841" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/activity_tokoh.xml" value="0.17074275362318841" />
+        <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/activity_tokoh_detail.xml" value="0.1" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/fragment_dashboard.xml" value="0.17074275362318841" />
-        <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/fragment_detail.xml" value="0.1" />
+        <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/fragment_detail.xml" value="0.2" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/fragment_home.xml" value="0.17074275362318841" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/fragment_menu.xml" value="0.25" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/fragment_notifications.xml" value="0.17074275362318841" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/item_row_sejarah.xml" value="0.33" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/item_row_timeline.xml" value="0.2" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/item_row_tokoh.xml" value="0.25" />
-        <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/row_item_menu.xml" value="0.67" />
+        <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/layout/row_item_menu.xml" value="0.5" />
         <entry key="..\:/Coding/Project/Android/UTS TAM/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20677083333333332" />
       </map>
     </option>

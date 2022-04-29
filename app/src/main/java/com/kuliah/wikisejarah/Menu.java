@@ -21,8 +21,8 @@ import android.widget.Toast;
 
 public class Menu extends Fragment{
     GridView gv;
-    String[] list = {"Timeline", "Tokoh", "Latar Belakang", "Wiki"};
-    int[] img = {R.drawable.ic_icon_timeline, R.drawable.ic_icon_tokoh, R.drawable.ic_icon_latar, R.drawable.ic_icon_wiki};
+    String[] list = {"Timeline", "Tokoh", "Latar Belakang", "Wiki", "Lokasi", "Dokumentasi"};
+    int[] img = {R.drawable.ic_icon_timeline, R.drawable.ic_icon_tokoh, R.drawable.ic_icon_latar, R.drawable.ic_icon_wiki, R.drawable.ic_map_foreground, R.drawable.ic_dokumentasi_foreground};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -69,6 +69,11 @@ public class Menu extends Fragment{
                     Intent intent = new Intent(getActivity(), Latar.class);
                     intent.putExtra("latar", lat);
                     intent.putExtra("latarPhoto", latP);
+                    startActivity(intent);
+
+                }
+                if(list[i].equals("Lokasi")){
+                    Intent intent = new Intent(getActivity(), LokasiActivity.class);
                     startActivity(intent);
 
                 }
