@@ -8,25 +8,11 @@
     android:gravity="center"
     tools:context=".Menu">
 
-    <Button
-        android:id="@+id/btn_timeline"
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Timeline"/>
-    <Button
-        android:id="@+id/btn_latar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Latar"/>
-    <Button
-        android:id="@+id/btn_tokoh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tokoh"/>
-    <Button
-        android:id="@+id/btn_wiki"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wiki"/>
+        android:numColumns="2"/>
 
 </LinearLayout>

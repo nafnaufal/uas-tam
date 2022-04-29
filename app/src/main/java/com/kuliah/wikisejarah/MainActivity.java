@@ -49,8 +49,12 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("photo", sejarah.getPhoto());
         i.putExtra("name", sejarah.getName());
         i.putExtra("detail", sejarah.getDetail());
+        i.putExtra("wiki", sejarah.getWiki());
         i.putExtra("tokoh", sejarah.getTokoh());
-        i.putExtra("tokohDetail", sejarah.getTokohDdetail());
+        i.putExtra("tokohDetail", sejarah.getTokohDetail());
+        i.putExtra("tokohPhoto", sejarah.getTokohPhoto());
+        i.putExtra("timeline", sejarah.getTimeline());
+        i.putExtra("timelineDetail", sejarah.getTimelineDdetail());
         startActivity(i);
         Toast.makeText(this, "Kamu memilih " + sejarah.getName(), Toast.LENGTH_SHORT).show();
     }

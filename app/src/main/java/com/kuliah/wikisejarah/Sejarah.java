@@ -3,9 +3,53 @@ package com.kuliah.wikisejarah;
 public class Sejarah {
     private String name;
     private String detail;
+    private String wiki;
     private String[] tokoh;
     private String[] tokohDdetail;
+    private int[] tokohPhoto;
+    private String[] timeline;
+    private String[] timelineDdetail;
     private int photo;
+
+    public String getWiki() {
+        return wiki;
+    }
+
+    public void setWiki(String wiki) {
+        this.wiki = wiki;
+    }
+
+    public String[] getTokohDdetail() {
+        return tokohDdetail;
+    }
+
+    public void setTokohDdetail(String[] tokohDdetail) {
+        this.tokohDdetail = tokohDdetail;
+    }
+
+    public int[] getTokohPhoto() {
+        return tokohPhoto;
+    }
+
+    public void setTokohPhoto(int[] tokohPhoto) {
+        this.tokohPhoto = tokohPhoto;
+    }
+
+    public String[] getTimeline() {
+        return timeline;
+    }
+
+    public void setTimeline(String[] timeline) {
+        this.timeline = timeline;
+    }
+
+    public String[] getTimelineDdetail() {
+        return timelineDdetail;
+    }
+
+    public void setTimelineDdetail(String[] timelineDdetail) {
+        this.timelineDdetail = timelineDdetail;
+    }
 
     public String[] getTokoh() {
         return tokoh;
@@ -15,11 +59,11 @@ public class Sejarah {
         this.tokoh = tokoh;
     }
 
-    public String[] getTokohDdetail() {
+    public String[] getTokohDetail() {
         return tokohDdetail;
     }
 
-    public void setTokohDdetail(String[] tokohDdetail) {
+    public void setTokohDetail(String[] tokohDdetail) {
         this.tokohDdetail = tokohDdetail;
     }
 

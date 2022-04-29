@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WikiSejarah">
         <activity
+            android:name=".TimelineActivity"
+            android:exported="false" />
+        <activity
             android:name=".TokohActivity"
             android:exported="false" />
         <activity

@@ -1,9 +1,11 @@
 package com.kuliah.wikisejarah;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,13 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class TokohAdapter extends RecyclerView.Adapter<TokohAdapter.TokohViewHolder> {
 
-    String name[], detail[];
+    String name[];
+    int photo[];
     Context context;
 
-    public TokohAdapter(Context ct, String name[], String detail[]){
+    public TokohAdapter(Context ct, String name[], int photo[]){
         context = ct;
         this.name = name;
-        this.detail = detail;
+        this.photo = photo;
     }
 
     @NonNull
@@ -31,7 +34,8 @@ public class TokohAdapter extends RecyclerView.Adapter<TokohAdapter.TokohViewHol
     @Override
     public void onBindViewHolder(@NonNull TokohViewHolder holder, int position) {
         holder.n.setText(name[position]);
-        holder.d.setText(detail[position]);
+        holder.p.setImageResource(photo[position]);
+        System.out.println(photo[position]);
     }
 
     @Override
@@ -41,13 +45,14 @@ public class TokohAdapter extends RecyclerView.Adapter<TokohAdapter.TokohViewHol
 
     public class TokohViewHolder extends RecyclerView.ViewHolder {
 
-        TextView n, d;
+        TextView n;
+        ImageView p;
 
         public TokohViewHolder(@NonNull View itemView) {
             super(itemView);
 
             n = itemView.findViewById(R.id.tv_item_name);
-            d = itemView.findViewById(R.id.tv_item_detail);
+            p = itemView.findViewById(R.id.iv_item_photo);
         }
     }
 }

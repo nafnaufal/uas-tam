@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_icon_wiki"/>
+
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="0dp"
@@ -13,7 +19,9 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
+        app:layout_constraintTop_toTopOf="@+id/logo">
+
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
