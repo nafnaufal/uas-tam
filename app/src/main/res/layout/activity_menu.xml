@@ -10,7 +10,7 @@
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@drawable/ic_icon_wiki"/>
+        android:src="@drawable/ic_logo"/>
 
     <FrameLayout
         android:id="@+id/frame_container"

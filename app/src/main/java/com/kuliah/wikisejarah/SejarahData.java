@@ -15,6 +15,17 @@ public class SejarahData {
             "https://id.wikipedia.org/wiki/Palagan_Ambarawa"
     };
 
+    private static String[] sejarahLatar = {
+            "Pembunuhan tanggal 28 Juni 1914 terhadap Adipati Agung Franz Ferdinand dari Austria, pewaris takhta Austria-Hongaria, oleh seorang nasionalis Yugoslavia di Sarajevo, Bosnia dan Herzegovina adalah pencetus perang ini.",
+            "Perang dunia II dimulai pada 1 September 1939, saat Jerman menyerang sisi barat Polandia. Saat itu Jerman dipimpin oleh Adolf Hitler. Serangan tersebut memicu pernyataan perang Inggris dan Perancis terhadap Jerman.",
+            "Pertempuran Ambarawa diawali ketika Sekutu mendarat ke Semarang pada 20 Oktober 1945. Sekutu berada di bawah pimpinan Brigadir Jenderal Bethel. Kedatangan Sekutu diboncengi oleh NICA (Netherland Indies Civil Administration) atau Pemerintahan Sipil Hindia Belanda."
+    };
+    private static int[] sejarahLatarImages = {
+            R.drawable.franz_ferdinand,
+            R.drawable.ww2,
+            R.drawable.ambarawa
+    };
+
 
     private static String[] sejarahDetails = {
             "Perang Dunia I merupakan peperangan global yang terpusat di Eropa dan dimulai pada 28 Juli 1914 sampai dengan 11 November 1918. Perang ini sering juga disebut dengan Perang Besar karena berakhir sampai dengan dimulainya Perang Dunia II.\n" +
@@ -135,6 +146,8 @@ public class SejarahData {
             sejarah.setDetail(sejarahDetails[position]);
             sejarah.setPhoto(sejarahImages[position]);
             sejarah.setTokoh(sejarahTokoh[position]);
+            sejarah.setLatar(sejarahLatar[position]);
+            sejarah.setPhotoLatar(sejarahLatarImages[position]);
             sejarah.setTokohDetail(sejarahTokohDetail[position]);
             sejarah.setTokohPhoto(sejarahTokohImages[position]);
             sejarah.setTimeline(sejarahTimeline[position]);

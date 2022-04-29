@@ -10,6 +10,24 @@ public class Sejarah {
     private String[] timeline;
     private String[] timelineDdetail;
     private int photo;
+    private String latar;
+    private int photoLatar;
+
+    public String getLatar() {
+        return latar;
+    }
+
+    public void setLatar(String latar) {
+        this.latar = latar;
+    }
+
+    public int getPhotoLatar() {
+        return photoLatar;
+    }
+
+    public void setPhotoLatar(int photoLatar) {
+        this.photoLatar = photoLatar;
+    }
 
     public String getWiki() {
         return wiki;

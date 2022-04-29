@@ -32,6 +32,7 @@
             android:layout_marginBottom="8dp"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:gravity="center"
             tools:text="@string/sejarah_name" />
 
         <TextView
@@ -50,6 +51,7 @@
             android:layout_marginBottom="9dp"
             android:ellipsize="end"
             android:maxLines="5"
+            android:gravity="center"
             tools:text="@string/detail" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
