@@ -58,6 +58,5 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("latar", sejarah.getLatar());
         i.putExtra("latarPhoto", sejarah.getPhotoLatar());
         startActivity(i);
-        Toast.makeText(this, "Kamu memilih " + sejarah.getName(), Toast.LENGTH_SHORT).show();
     }
 }

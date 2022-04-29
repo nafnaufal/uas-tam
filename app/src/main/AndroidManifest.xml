@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WikiSejarah">
         <activity
+            android:name=".TokohDetail"
+            android:exported="false" />
+        <activity
             android:name=".Latar"
             android:exported="false" />
         <activity

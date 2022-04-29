@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class TokohActivity extends AppCompatActivity {
@@ -21,7 +22,7 @@ public class TokohActivity extends AppCompatActivity {
         name = getIntent().getStringArrayExtra("tokoh");
         detail = getIntent().getStringArrayExtra("tokohDetail");
 
-        TokohAdapter tokohAdapter = new TokohAdapter(this, name, photo);
+        TokohAdapter tokohAdapter = new TokohAdapter(this, name, photo, detail);
         rvtokoh.setAdapter(tokohAdapter);
         rvtokoh.setLayoutManager(new LinearLayoutManager(this));
     }
